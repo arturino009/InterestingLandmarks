@@ -96,12 +96,12 @@ namespace InterestingLandmarks
                 if (Settings.ShowSwitch)
                 {
                     foreach (var e in allEntities.ValidEntitiesByType[EntityType.Terrain])
-					{
-						if (e.Path.Contains ("Switch"))
-						{
-							Graphics.DrawTextWithBackground(e.RenderName, GameController.IngameState.Data.GetGridMapScreenPosition(e.GridPos), Settings.SwitchColor, Color.Black);
-						}
-					}
+		    {
+			if (e.Path.Contains ("Switch"))
+			{
+			    Graphics.DrawTextWithBackground(e.RenderName, GameController.IngameState.Data.GetGridMapScreenPosition(e.GridPos), Settings.SwitchColor, Color.Black);
+			}
+		    }
                 }
 
                 // Essences
