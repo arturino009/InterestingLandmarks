@@ -91,6 +91,18 @@ namespace InterestingLandmarks
                         Graphics.DrawTextWithBackground(e.GetComponent<MinimapIcon>().Name, GameController.IngameState.Data.GetGridMapScreenPosition(e.GridPos), Settings.WaypointsColor, Color.Black);
                     }
                 }
+				
+				// Secret Switches
+                if (Settings.ShowSwitch)
+                {
+                    foreach (var e in allEntities.ValidEntitiesByType[EntityType.Terrain])
+					{
+						if (e.Path.Contains ("Switch"))
+						{
+							Graphics.DrawTextWithBackground(e.RenderName, GameController.IngameState.Data.GetGridMapScreenPosition(e.GridPos), Settings.SwitchColor, Color.Black);
+						}
+					}
+                }
 
                 // Essences
                 if (Settings.ShowEssence)
